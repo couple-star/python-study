@@ -5,3 +5,19 @@
 #
 # 请编程实现发扑克牌。
 # 提示： 使用random库，具体请help查看或者网上查看使用方法
+
+import random
+    
+list=['A','2','3','4','5','6','7','8','9','10','J','Q','K']
+colorlist=[' hongtao',' hongfang',' heitao',' heicao']
+cardlist=[]
+for i in range(13):
+    for j in range(4):
+        card=list[i]+colorlist[j]
+        cardlist.append(card)
+print cardlist
+
+random.shuffle(cardlist)
+
+for m in range(52):
+    print cardlist[m]
