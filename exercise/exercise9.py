@@ -5,3 +5,22 @@
 # 其中，最大的金片在最底下，其余的依次叠上去，且一个比一个小。
 # 勃拉玛要求众僧将该金刚石棒中的金片逐个地移到另一根棒上，规定一次只能移动一个金片，且金片在放到棒上时，大的只能放在小的下面，
 # 但是可以利用中间的一个棒作为辅助移动使用。
+
+
+def move(a, b, c, n):
+    if n == 1:
+        print a, "->", c
+        return
+    move(a, c, b, n - 1)
+    print a, "->", c
+    move(b, a, c, n - 1)
+
+while True:
+    try:
+        num = input('Please input a number: ')
+    except:
+        print 'Error! please input a number!'
+    else:
+        break
+
+move('A', 'B', 'C', num)
