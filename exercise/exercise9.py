@@ -6,6 +6,7 @@
 # 勃拉玛要求众僧将该金刚石棒中的金片逐个地移到另一根棒上，规定一次只能移动一个金片，且金片在放到棒上时，大的只能放在小的下面，
 # 但是可以利用中间的一个棒作为辅助移动使用。
 
+<<<<<<< Updated upstream
 
 def move(a, b, c, n):
     if n == 1:
@@ -24,3 +25,20 @@ while True:
         break
 
 move('A', 'B', 'C', num)
+=======
+A=[1,2,3]
+B=[]
+C=[]
+
+B.append(A[0])
+
+C.append(A[1])
+B.insert(1,C[0])
+C.pop(0)
+
+C.append(A[2])
+C.insert(0,B[1])
+C.insert(0,B[0])
+
+print B,C
+>>>>>>> Stashed changes
