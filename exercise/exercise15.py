@@ -25,3 +25,11 @@
 # ...X
 # This is not a valid board - as battleships will always have a cell separating between them.
 # Your algorithm should not modify the value of the board.
+
+
+class Solution(object):
+    def countBattleships(self, board):
+        """
+        :type board: List[List[str]]
+        :rtype: int
+        """
