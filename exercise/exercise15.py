@@ -27,9 +27,28 @@
 # Your algorithm should not modify the value of the board.
 
 
-class Solution(object):
-    def countBattleships(self, board):
-        """
-        :type board: List[List[str]]
-        :rtype: int
-        """
+# board=[['.', 'x', 'x', 'x', 'x'],['.', '.', '.', '.', '.'],['.', '.', 'x', 'x', '.']]
+# board=[['x', 'x', '.', '.', '.'],['.', 'x', 'x', 'x', 'x'],['.', 'x', '.', '.', '.'],['.', 'x', 'x', 'x', '.']]
+# countBattleships()
+board = ["X..X","...X","...X"]
+
+
+# def countBattleships(self, board):
+
+# board = [[''.join(i)] for i in board]
+for i in board:
+    print i
+
+n = len(board)
+m = 0
+for j in range(n):
+    string = board[j][0]  # stri, 一行的情况,如：...X
+    lenth = len(string)
+    if string[lenth - 1] == 'x':
+        m += 1
+    for i in range(lenth - 1):
+        if string[i] == 'x':
+            if string[i + 1] == '.':
+                m += 1
+print m
+
